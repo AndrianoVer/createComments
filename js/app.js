@@ -9,7 +9,8 @@ document.getElementById('comment-add').onclick = function(){
 	let comment = {
 		name: commentName.value,
 		body: commentBody.value,
-		time: Math.floor(Date.now()/1000)
+		time: Math.floor(Date.now()/1000),
+		icon: `<i class="far fa-thumbs-up"></i>`
 	}
 	
 	commentName.value = '';
@@ -37,6 +38,7 @@ function showComments(){
 		out += `<p class="text-right small"><em>${timeConverter(item.time)}</em></p>`;
 		out += `<p class="alert alert-success">${item.name}</p>`;
 		out += `<p class="alert alert-warning">${item.body}</p>`;
+		out += `<i class="far fa-thumbs-up">${item.icon}</i>`;
 	})
 	commentField.innerHTML = out;
 };
