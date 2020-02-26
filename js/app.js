@@ -10,7 +10,7 @@ document.getElementById('comment-add').onclick = function(){
 		name: commentName.value,
 		body: commentBody.value,
 		time: Math.floor(Date.now()/1000),
-		icon: `<i class="far fa-thumbs-up"></i>`
+		icon: <i class="far fa-thumbs-up"></i>
 	}
 	
 	commentName.value = '';
