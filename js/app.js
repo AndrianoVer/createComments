@@ -1,7 +1,7 @@
 let comments = [];
 loadComments();
 
-document.getElementById('comment-add').onclick = function(){
+document.getElementById('comment-create').onclick = function () {
 	event.preventDefault();
 	let commentName = document.getElementById('comment-name');
 	let commentBody = document.getElementById('comment-body');
@@ -12,8 +12,7 @@ document.getElementById('comment-add').onclick = function(){
 		time: Math.floor(Date.now()/1000)
 	}
 	
-	commentName.value = '';
-	commentBody.value = '';
+	commentName.value = commentBody.value = '';
 
 	comments.push(comment);
 
@@ -30,15 +29,27 @@ function loadComments(){
 	showComments();
 }
 
+let counter = 0;
+function likeIncrease(){
+	counter++;
+	let myClick = document.getElementById('clickup');
+	myClick.innerText = counter;	
+}
+function degrease() {
+	counter++;
+	let myClickDown = document.getElementById('clickdown');
+	myClickDown.innerText = counter;
+}
+
 function showComments(){
 	let commentField = document.getElementById('comment-field');
 	let out = '';
 	comments.forEach(function(item){
 		out += `<p class="text-right small"><em>${timeConverter(item.time)}</em></p>`;
 		out += `<p class="alert alert-success">${item.name}</p>`;
-		out += `<p class="alert alert-warning">${item.body}</p>`;
-		out += `<i class="far fa-thumbs-up"></i>`;
-		out += `<i class="far fa-thumbs-down ml-3"></i>`;		
+		out += `<p class="alert alert-warning text-truncate">${item.body}</p>`;
+		out += `<i id="clickup" class="far fa-thumbs-up" onclick="likeIncrease()"></i>`;
+		out += `<i id="clickdown" class="far fa-thumbs-down ml-3" onclick="degrease()"></i>`;
 	})
 	commentField.innerHTML = out;
 };

@@ -7,7 +7,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-		crossorigin="anonymous">		
+		crossorigin="anonymous">				
 		<link rel="stylesheet" href="./css/style.css">
 	<title>ElifTech</title>
 </head>
@@ -30,17 +30,22 @@
 						<label for="comment-body">Comment:</label>
 						<input type="text" class="form-control" id="comment-body" placeholder="Your comment">
 					</div>
-					<div class="form-group text-right">
-						<button type="submit" id="comment-add" class="btn btn-outline-success">Add comment</button>
+					<div class="form-group text-center">
+						<button type="submit" id="comment-create" class="btn btn-outline-success mr-3">Create</button>
+						<button type="submit" id="comment-read" class="btn btn-outline-info mr-3">Read</button>
+						<button type="submit" id="comment-update" class="btn btn-outline-warning mr-3">Update</button>
+						<button type="submit" id="comment-delete" class="btn btn-outline-danger mr-3">Delete</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 
-
-
+	<!-- Dexie API -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/2.0.4/dexie.min.js"></script>
+	<!-- Fontawesome -->
 	<script src="https://kit.fontawesome.com/8c19afdc9b.js" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 	</script>

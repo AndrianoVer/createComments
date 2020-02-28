@@ -7,7 +7,7 @@ i{
 }
 
 .fa-thumbs-up::after{
-	content: '1';
+	content: '';
 	position: absolute;
 	width: 12px;
 	height: 12px;
@@ -24,7 +24,7 @@ i{
 }
 
 .fa-thumbs-down::after {
-	content: '4';
+	content: '';
 	position: absolute;
 	width: 12px;
 	height: 12px;
